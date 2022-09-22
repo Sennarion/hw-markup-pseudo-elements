@@ -9,6 +9,8 @@
   --primary-light-color: #f5f4fa;
   --item-border-color: #eeeeee;
   --header-border-color: #ececec;
+  --icon-color: #afb1b8;
+  --footer-links-color: rgba(255, 255, 255, 0.1);
 }
 
 html {
@@ -123,7 +125,14 @@ img {
   margin-left: auto;
 }
 
+.contacts-icon {
+  fill: currentColor;
+  margin-right: 10px;
+}
+
 .contact-link {
+  display: inline-flex;
+  align-items: center;
   font-size: 14px;
   font-weight: 500;
   letter-spacing: 0.02em;
@@ -137,12 +146,20 @@ img {
 }
 
 .section.hero {
-  text-align: center;
-  background-color: var(--primary-dark-color);
+  max-width: 1600px;
+  margin: 0 auto;
   padding: 200px 0;
+  text-align: center;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url('../images/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .hero-text {
+  max-width: 700px;
+  margin: 0 auto;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -163,6 +180,7 @@ img {
   padding: 10px 32px;
   border: none;
   border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .hero-button:hover,
@@ -203,6 +221,21 @@ img {
   flex-basis: calc((100% - 90px) / 4);
 }
 
+.icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  width: 100%;
+  background-color: var(--primary-light-color);
+  border-radius: 4px;
+  height: 120px;
+}
+
+.feature-icon {
+  fill: var(--title-color);
+}
+
 .feature-title {
   text-transform: uppercase;
   font-size: 14px;
@@ -240,6 +273,8 @@ img {
   line-height: 1.18;
   background-color: var(--primary-white-color);
   border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .person-description {
@@ -252,6 +287,68 @@ img {
   font-weight: 500;
   color: var(--title-color);
   margin-bottom: 10px;
+}
+
+.person-position {
+  margin-bottom: 16px;
+}
+
+.icons-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: transparent;
+  color: var(--icon-color);
+}
+
+.icon-link:hover,
+.icon-link:focus {
+  background-color: var(--accent-color);
+  color: var(--primary-white-color);
+}
+
+.icon-item {
+  fill: currentColor;
+}
+
+.clients-list {
+  display: flex;
+  gap: 30px;
+}
+
+.client {
+  width: calc((100% - 150px) / 6);
+  height: 92px;
+}
+
+.client-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  color: var(--icon-color);
+}
+
+.client-icon {
+  fill: currentColor;
+}
+
+.client-link:hover,
+.client-link:focus {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
 }
 
 .filter-buttons {
@@ -279,6 +376,8 @@ img {
 .filter-button:focus {
   color: var(--primary-white-color);
   background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .products-list {
@@ -289,6 +388,12 @@ img {
 
 .product-item {
   flex-basis: calc((100% - 60px) / 3);
+}
+
+.product-item:hover,
+.product-item:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .product-description {
@@ -315,6 +420,14 @@ img {
 .page-footer {
   background-color: var(--primary-dark-color);
   padding: 60px 0;
+}
+
+.footer-content {
+  display: flex;
+}
+
+.footer-nav {
+  margin-right: 70px;
 }
 
 .page-footer .logo {
@@ -344,4 +457,28 @@ img {
 .adress-link:hover,
 .adress-link:focus {
   color: var(--accent-color);
+}
+
+.footer-social {
+  color: var(--primary-white-color);
+}
+
+.social-title {
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.footer-social .icons-list {
+  gap: 10px;
+}
+
+.footer-social .icon-link {
+  background-color: var(--footer-links-color);
+  color: var(--primary-white-color);
+}
+
+.footer-social .icon-link:hover {
+  background-color: var(--accent-color);
 }
