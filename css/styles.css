@@ -326,7 +326,7 @@ img {
 }
 
 .client {
-  width: calc((100% - 150px) / 6);
+  flex-basis: calc((100% - 150px) / 6);
   height: 92px;
 }
 
