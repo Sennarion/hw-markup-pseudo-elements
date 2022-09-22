@@ -479,6 +479,7 @@ img {
   color: var(--primary-white-color);
 }
 
-.footer-social .icon-link:hover {
+.footer-social .icon-link:hover,
+.footer-social .icon-link:focus {
   background-color: var(--accent-color);
 }
